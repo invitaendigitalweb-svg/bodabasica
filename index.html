@@ -4,35 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Invitación</title>
+    <!-- Importación de fuente Cinzel -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #000; }
+        body { margin: 0; padding: 0; font-family: 'Cinzel', serif; background-color: #000; }
         img { width: 100%; display: block; }
         
         .section-container { position: relative; width: 100%; }
         
-        /* Botón estándar (VER UBICACIÓN) */
+        /* Botón ubicación ceremonia (Bajado y más largo) */
         .btn-ubicacion {
             position: absolute;
-            bottom: 20px;
+            bottom: 10%; /* Ajustado para bajarlo */
             left: 50%;
             transform: translateX(-50%);
-            background-color: #001642;
+            background-color: #6B764C;
             color: white;
-            padding: 12px 20px; /* Reducido el padding para que no sea tan largo */
+            padding: 12px 25px;
             text-decoration: none;
+            font-family: 'Cinzel', serif;
             font-weight: bold;
             border-radius: 10px;
-            font-size: 16px; /* Ajustado el tamaño */
-            width: auto; /* Cambiado a auto para que se ajuste al texto */
-            min-width: 150px; /* Ancho mínimo para que se vea bien */
+            font-size: 18px;
             text-align: center;
+            min-width: 250px; /* Más largo */
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             z-index: 10;
         }
 
-        /* Ajuste específico para el botón de WhatsApp */
-        .btn-whatsapp {
-            bottom: 50px; /* Bajado el botón ajustando este valor */
+        /* Botón confirmar asistencia (Más largo, posición mantenida) */
+        .btn-confirmar {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #6B764C;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center;
+            min-width: 250px; /* Más largo */
+            z-index: 10;
         }
 
         .slider-container { 
@@ -64,21 +80,15 @@
 
     <div class="section-container">
         <img src="ceremonia.jpg" alt="Ceremonia">
-        <a href="https://www.google.com/maps/place/St+Mary%27s+Catholic+Church/@36.7501178,-108.1792794,17z/data=!3m1!4b1!4m6!3m5!1s0x873b8f7264d1ede5:0x5199fb77dd9a7f1e!8m2!3d36.7501178!4d-108.1792794!16s%2Fg%2F1w6_p8y8?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
-           class="btn-ubicacion" target="_blank">VER UBICACIÓN</a>
-    </div>
-
-    <div class="section-container">
-        <img src="recepcion.jpg" alt="Recepción">
-        <a href="https://www.google.com/maps/place/McGee+Park+Convention+Center/@36.6973811,-108.1115839,16z/data=!4m10!1m2!2m1!1smcgee+park!3m6!1s0x873b879e0badfdd1:0xb8f5ca3a5320827a!8m2!3d36.6973811!4d-108.1020567!15sCgptY2dlZSBwYXJrkgERY29udmVudGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11nwcy25pt?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
+        <a href="https://www.google.com/maps/place/Tizate+Sea+Garden/@20.755375,-105.3704433,15z/data=!4m15!1m8!3m7!1s0x842141843848881d:0xceb115f9117dbb0f!2sTizate+Sea+Garden!8m2!3d20.7554698!4d-105.3707493!10e5!16s%2Fg%2F11fmv9r6gn!3m5!1s0x842141843848881d:0xceb115f9117dbb0f!8m2!3d20.7554698!4d-105.3707493!16s%2Fg%2F11fmv9r6gn?hl=es_419&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" 
            class="btn-ubicacion" target="_blank">VER UBICACIÓN</a>
     </div>
 
     <!-- Galería -->
     <div class="slider-container">
-        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/1.jpg_hgpejc.jpg" class="active" alt="Foto 1">
-        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/2.jpg_xllxb5.jpg" alt="Foto 2">
-        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/3.jpg_xpb4fd.jpg" alt="Foto 3">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298292/WhatsApp_Image_2025-08-25_at_5.14.00_PM_5_zninrn.jpg" class="active" alt="Foto 1">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298282/WhatsApp_Image_2025-08-25_at_5.14.00_PM_4_etip7r.jpg" alt="Foto 2">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298272/WhatsApp_Image_2025-08-25_at_5.14.00_PM_3_mj65my.jpg" alt="Foto 3">
     </div>
 
     <!-- Secciones finales -->
@@ -87,8 +97,7 @@
     
     <div class="section-container">
         <img src="confirmacion.jpg" alt="Confirmación">
-        <!-- Botón con la clase btn-whatsapp -->
-        <a href="https://wa.link/ik5r5d" class="btn-ubicacion btn-whatsapp" target="_blank">DA CLICK</a>
+        <a href="https://wa.link/ik5r5d" class="btn-confirmar" target="_blank">DA CLICK</a>
     </div>
 
     <script>
