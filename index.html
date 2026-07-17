@@ -10,6 +10,7 @@
         
         .section-container { position: relative; width: 100%; }
         
+        /* Botón estándar (VER UBICACIÓN) */
         .btn-ubicacion {
             position: absolute;
             bottom: 20px;
@@ -17,20 +18,21 @@
             transform: translateX(-50%);
             background-color: #001642;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 20px; /* Reducido el padding para que no sea tan largo */
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
-            font-size: 18px;
-            width: 80%;
+            font-size: 16px; /* Ajustado el tamaño */
+            width: auto; /* Cambiado a auto para que se ajuste al texto */
+            min-width: 150px; /* Ancho mínimo para que se vea bien */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             z-index: 10;
         }
 
-        /* Ajuste específico para el botón de WhatsApp (Más arriba) */
+        /* Ajuste específico para el botón de WhatsApp */
         .btn-whatsapp {
-            bottom: 250px; 
+            bottom: 50px; /* Bajado el botón ajustando este valor */
         }
 
         .slider-container { 
@@ -85,7 +87,7 @@
     
     <div class="section-container">
         <img src="confirmacion.jpg" alt="Confirmación">
-        <!-- Botón con la clase btn-whatsapp para aplicar el bottom: 250px -->
+        <!-- Botón con la clase btn-whatsapp -->
         <a href="https://wa.link/ik5r5d" class="btn-ubicacion btn-whatsapp" target="_blank">DA CLICK</a>
     </div>
 
