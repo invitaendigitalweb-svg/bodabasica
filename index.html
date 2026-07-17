@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Invitación</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #000; }
+        img { width: 100%; display: block; }
+        
+        .section-container { position: relative; width: 100%; }
+        
+        .btn-ubicacion {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #001642;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 18px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        /* Ajuste específico para el botón de WhatsApp (Más arriba) */
+        .btn-whatsapp {
+            bottom: 250px; 
+        }
+
+        .slider-container { 
+            position: relative; 
+            width: 100%; 
+            aspect-ratio: 1/1; 
+            overflow: hidden; 
+            background: #000;
+        }
+        .slider-container img {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+            opacity: 0; 
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-container img.active { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <!-- Invitación -->
+    <img src="portada.jpg" alt="Portada">
+    <img src="oracion.jpg" alt="Oración">
+    <img src="padres.jpg" alt="Padres">
+
+    <div class="section-container">
+        <img src="ceremonia.jpg" alt="Ceremonia">
+        <a href="https://www.google.com/maps/place/St+Mary%27s+Catholic+Church/@36.7501178,-108.1792794,17z/data=!3m1!4b1!4m6!3m5!1s0x873b8f7264d1ede5:0x5199fb77dd9a7f1e!8m2!3d36.7501178!4d-108.1792794!16s%2Fg%2F1w6_p8y8?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
+           class="btn-ubicacion" target="_blank">VER UBICACIÓN</a>
+    </div>
+
+    <div class="section-container">
+        <img src="recepcion.jpg" alt="Recepción">
+        <a href="https://www.google.com/maps/place/McGee+Park+Convention+Center/@36.6973811,-108.1115839,16z/data=!4m10!1m2!2m1!1smcgee+park!3m6!1s0x873b879e0badfdd1:0xb8f5ca3a5320827a!8m2!3d36.6973811!4d-108.1020567!15sCgptY2dlZSBwYXJrkgERY29udmVudGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11nwcy25pt?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
+           class="btn-ubicacion" target="_blank">VER UBICACIÓN</a>
+    </div>
+
+    <!-- Galería -->
+    <div class="slider-container">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/1.jpg_hgpejc.jpg" class="active" alt="Foto 1">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/2.jpg_xllxb5.jpg" alt="Foto 2">
+        <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784250026/3.jpg_xpb4fd.jpg" alt="Foto 3">
+    </div>
+
+    <!-- Secciones finales -->
+    <img src="regalos.jpg" alt="Regalos">
+    <img src="vestimenta.jpg" alt="Vestimenta">
+    
+    <div class="section-container">
+        <img src="confirmacion.jpg" alt="Confirmación">
+        <!-- Botón con la clase btn-whatsapp para aplicar el bottom: 250px -->
+        <a href="https://wa.link/ik5r5d" class="btn-ubicacion btn-whatsapp" target="_blank">DA CLICK</a>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.slider-container img');
+        let current = 0;
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 2000);
+    </script>
+</body>
+</html>
