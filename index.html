@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Invitación</title>
-    <!-- Importación de fuente Cinzel -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; padding: 0; font-family: 'Cinzel', serif; background-color: #000; }
+        /* Fondo general blanco */
+        body { margin: 0; padding: 0; font-family: 'Cinzel', serif; background-color: #fff; }
         img { width: 100%; display: block; }
+        
+        /* Espacio blanco entre secciones */
+        .espacio-blanco { height: 10px; background-color: #fff; }
         
         .section-container { position: relative; width: 100%; }
         
-        /* Botón ubicación ceremonia (Bajado y más largo) */
         .btn-ubicacion {
             position: absolute;
-            bottom: 10%; /* Ajustado para bajarlo */
+            bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
             background-color: #6B764C;
@@ -27,17 +29,19 @@
             border-radius: 10px;
             font-size: 18px;
             text-align: center;
-            min-width: 250px; /* Más largo */
+            min-width: 250px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             z-index: 10;
         }
 
-        /* Botón confirmar asistencia (Más largo, posición mantenida) */
+        .btn-container-ext {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
         .btn-confirmar {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            display: inline-block;
             background-color: #6B764C;
             color: white;
             padding: 12px 25px;
@@ -46,35 +50,30 @@
             font-weight: bold;
             border-radius: 10px;
             font-size: 18px;
-            text-align: center;
-            min-width: 250px; /* Más largo */
-            z-index: 10;
+            min-width: 250px;
         }
 
         .slider-container { 
             position: relative; 
             width: 100%; 
-            aspect-ratio: 1/1; 
             overflow: hidden; 
-            background: #000;
+            background: #fff;
         }
         .slider-container img {
             position: absolute; 
             top: 0; 
             left: 0; 
             width: 100%; 
-            height: 100%;
-            object-fit: cover; 
             opacity: 0; 
             transition: opacity 1s ease-in-out;
         }
-        .slider-container img.active { opacity: 1; }
+        .slider-container img.active { position: relative; opacity: 1; }
     </style>
 </head>
 <body>
 
-    <!-- Invitación -->
     <img src="portada.jpg" alt="Portada">
+    <div class="espacio-blanco"></div>
     <img src="oracion.jpg" alt="Oración">
     <img src="padres.jpg" alt="Padres">
 
@@ -84,19 +83,17 @@
            class="btn-ubicacion" target="_blank">VER UBICACIÓN</a>
     </div>
 
-    <!-- Galería -->
     <div class="slider-container">
         <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298292/WhatsApp_Image_2025-08-25_at_5.14.00_PM_5_zninrn.jpg" class="active" alt="Foto 1">
         <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298282/WhatsApp_Image_2025-08-25_at_5.14.00_PM_4_etip7r.jpg" alt="Foto 2">
         <img src="https://res.cloudinary.com/gghygmrq/image/upload/v1784298272/WhatsApp_Image_2025-08-25_at_5.14.00_PM_3_mj65my.jpg" alt="Foto 3">
     </div>
 
-    <!-- Secciones finales -->
     <img src="regalos.jpg" alt="Regalos">
     <img src="vestimenta.jpg" alt="Vestimenta">
+    <img src="confirmacion.jpg" alt="Confirmación">
     
-    <div class="section-container">
-        <img src="confirmacion.jpg" alt="Confirmación">
+    <div class="btn-container-ext">
         <a href="https://wa.link/ik5r5d" class="btn-confirmar" target="_blank">DA CLICK</a>
     </div>
 
